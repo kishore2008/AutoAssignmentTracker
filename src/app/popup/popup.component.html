@@ -1,0 +1,54 @@
+<form class="example-form" [formGroup]="companyform" (ngSubmit)="SaveCompany()">
+    <mat-card>
+    <mat-card-content>
+    
+
+    <mat-form-field class="example-full-width" appearance="fill">
+      <mat-label>id</mat-label>
+      <input matInput placeholder="id" formControlName="id" >
+    </mat-form-field>
+
+    <mat-form-field class="example-full-width" appearance="fill">
+        <mat-label>Name</mat-label>
+        <input matInput placeholder="Name" formControlName="name" >
+      </mat-form-field>
+
+      <mat-form-field class="example-full-width" appearance="fill">
+        <mat-label>email</mat-label>
+        <input matInput placeholder="email" formControlName="email" >
+      </mat-form-field>
+
+      <mat-form-field class="example-full-width" appearance="fill">
+        <mat-label>programName</mat-label>
+        <input matInput placeholder="programName" formControlName="programName" >
+      </mat-form-field><br>
+
+  
+    <mat-form-field class="example-full-width" appearance="fill">
+      <mat-label>startDate</mat-label>
+      <textarea matInput placeholder="startDate" formControlName="startDate"></textarea>
+    </mat-form-field>
+
+    <mat-form-field class="example-full-width" appearance="fill">
+      <mat-label>endDate</mat-label>
+      <textarea matInput placeholder="endDate" formControlName="endDate"></textarea>
+    </mat-form-field>
+
+    <mat-form-field class="example-full-width" appearance="fill">
+      <mat-label>SMEName</mat-label>
+      <textarea matInput placeholder="SMEName" formControlName="SMEName"></textarea>
+    </mat-form-field>
+
+    <mat-form-field class="example-full-width" appearance="fill">
+      <mat-label>statusOfProgram</mat-label>
+      <textarea matInput placeholder="statusOfProgram" formControlName="statusOfProgram"></textarea>
+    </mat-form-field>
+
+</mat-card-content>
+    <mat-card-footer>
+    <div class="example-button-row" style="margin: 2px">
+        <button mat-raised-button color="primary">Save</button> | <a (click)="closepopup()" mat-raised-button color="accent">Close</a>
+    </div>
+</mat-card-footer>
+</mat-card>
+   </form>
