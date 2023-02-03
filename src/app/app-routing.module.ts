@@ -14,7 +14,7 @@ const routes: Routes = [
     component:LoginComponent,path:"login"
   },
   {
-    component:CompanyComponent,path:""
+    component:LoginComponent,path:""
   },
   {
     component:EditassignmentComponent,path:"editassignment"

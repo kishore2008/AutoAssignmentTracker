@@ -31,4 +31,8 @@ export class ApiService {
     return this.http.put(this.apiurl + '/' + id, companydata);
   }
 
+  getProgramDropDown():Observable<any>{
+    return this.http.get<companymodel[]>("https://localhost:7260/api/ProgramTracker/GetTechTracks"+ 'programs');
+  }
+
 }
