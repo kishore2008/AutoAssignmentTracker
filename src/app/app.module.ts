@@ -9,8 +9,6 @@ import { CompanyComponent } from './company/company.component';
 import { PopupComponent } from './popup/popup.component';
 import { ReactiveFormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
-// import { ProductComponent } from './product/product.component';
-// import { AddproductComponent } from './addproduct/addproduct.component';
 import { EditassignmentComponent } from './editassignment/editassignment.component';
 import { LoginComponent } from './login/login.component';
 import { HeaderComponent } from './header/header.component';
@@ -18,8 +16,13 @@ import { FormsModule } from '@angular/forms';
 import {MatDatepickerModule} from '@angular/material/datepicker';
 import {MatNativeDateModule} from '@angular/material/core';
 import { MbscModule } from '@mobiscroll/angular';
-
-
+import { MatMenuModule} from '@angular/material/menu';
+import { NavbarComponent } from './navbar/navbar.component';
+import { MatSidenavModule } from '@angular/material/sidenav';
+import {MatListModule} from '@angular/material/list';
+import {MatToolbarModule} from '@angular/material/toolbar'; 
+import { RouterModule } from '@angular/router';
+import { ViewAssignmentComponent } from './view-assignment/view-assignment.component';
 
 
 @NgModule({
@@ -29,11 +32,14 @@ import { MbscModule } from '@mobiscroll/angular';
     PopupComponent,
     EditassignmentComponent,
     LoginComponent,
-    HeaderComponent
+    HeaderComponent,
+    NavbarComponent,
+    ViewAssignmentComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
+    RouterModule,
     BrowserAnimationsModule,
     MaterialModule,
     ReactiveFormsModule,
@@ -42,7 +48,11 @@ import { MbscModule } from '@mobiscroll/angular';
     FontAwesomeModule,
     MatDatepickerModule,
     MatNativeDateModule,
-    MbscModule
+    MbscModule,
+    MatMenuModule,
+    MatSidenavModule,
+    MatListModule,
+    MatToolbarModule
   ],
   providers: [],
   bootstrap: [AppComponent]

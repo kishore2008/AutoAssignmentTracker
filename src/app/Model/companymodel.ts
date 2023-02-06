@@ -1,11 +1,11 @@
 export interface companymodel{
     id:number,
+    vamid:number,
     name:string,
     email:string,
-    techTrack:string;
     programName:string,
-    startDate:string,
-    endDate:string,
+    startDate:Date,
+    endDate:Date,
     SMEName:string,
     statusOfProgram:string
 }

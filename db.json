@@ -2,16 +2,18 @@
   "company": [
     {
       "id": 1,
+      "vamid":8124,
       "name": "kishore",
       "email": "kishore@gmail.com",
       "programName": "java",
       "startDate": "20/01/2023",
       "endDate": "22/01/2023",
       "SMEName": "Vasudha",
-      "statusOfProgram": "close"
+      "statusOfProgram": "open"
     },
     {
       "id": 2,
+      "vamid":8124,
       "name": "kishore",
       "email": "kishore@gmail.com",
       "programName": "java",
@@ -22,6 +24,7 @@
     },
     {
       "id": 3,
+      "vamid":8124,
       "name": "kishore",
       "email": "kishore@gmail.com",
       "programName": "java",
@@ -32,6 +35,7 @@
     },
     {
       "id": 4,
+      "vamid":8124,
       "name": "kishore",
       "email": "kishore@gmail.com",
       "programName": "java",
@@ -42,6 +46,7 @@
     },
     {
       "id": 5,
+      "vamid":8124,
       "name": "kishore",
       "email": "kishore@gmail.com",
       "programName": "java",

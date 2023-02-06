@@ -26,7 +26,7 @@ export class EditassignmentComponent implements OnInit {
   ngOnInit(): void {
     this.LoadCompany();
   }
-  displayColums: string[] = ["id", "name", "email", "programName", "startDate", "endDate","SMEName","statusOfProgram", "action"]
+  displayColums: string[] = ["id","vamid", "name", "email", "programName", "startDate", "endDate","SMEName","statusOfProgram", "action"]
 
   Openpopup(id: any) {
     const _popup = this.dialog.open(PopupComponent, {

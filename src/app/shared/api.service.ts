@@ -32,7 +32,7 @@ export class ApiService {
   }
 
   getProgramDropDown():Observable<any>{
-    return this.http.get<companymodel[]>("https://localhost:7260/api/ProgramTracker/GetTechTracks"+ 'programs');
+    return this.http.get<companymodel[]>("https://localhost:7260/api/ProgramTracker/GetTechTracks"+ 'program');
   }
 
 }

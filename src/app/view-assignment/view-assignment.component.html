@@ -1,21 +1,22 @@
 <app-header></app-header>
-<h2>Edit Assignment</h2>
-<p>Resource Manager - <strong>Vasudha</strong> </p>
 
+<h2>View Assignment</h2>
+<p>Resource Manager - <strong>Vasudha</strong></p>
 
-<div class="mat-elevation-z8">
+<div class="mat-elevation-z8" aria-readonly="true">
     <div>
         <a mat-raised-button color="primary" (click)="Openpopup('')" style="margin: 2%">Create New</a>
     </div>
-    <table mat-table [dataSource]="finaldata" matSort class="mat-elevation-z8">
+    <table mat-table [dataSource]="finaldata" matSort class="mat-elevation-z8"  style="margin: 0% 0% 0% 0%;">
      
         <ng-container matColumnDef="id">
           <th mat-header-cell *matHeaderCellDef mat-sort-header> ID</th>
           <td mat-cell *matCellDef="let element">{{element.id}}</td>
         </ng-container>
+
         <ng-container matColumnDef="vamid">
-          <th mat-header-cell *matHeaderCellDef mat-sort-header> VAM ID</th>
-          <td mat-cell *matCellDef="let element">{{element.vamid}}</td>
+          <th mat-header-cell *matHeaderCellDef> VAM ID</th>
+          <td mat-cell *matCellDef="let element">{{element.vamid }}</td>
         </ng-container>
 
         <ng-container matColumnDef="name">
@@ -28,18 +29,23 @@
             <td mat-cell *matCellDef="let element">{{element.email }}</td>
           </ng-container>
 
+          <!-- <ng-container matColumnDef="techTrack">
+            <th mat-header-cell *matHeaderCellDef> techTrack</th>
+            <td mat-cell *matCellDef="let element">{{element.techTrack }}</td>
+          </ng-container> -->
+
           <ng-container matColumnDef="programName">
-            <th mat-header-cell *matHeaderCellDef> ProgramName</th>
+            <th mat-header-cell *matHeaderCellDef> Program-Name</th>
             <td mat-cell *matCellDef="let element">{{element.programName }}</td>
           </ng-container>
 
           <ng-container matColumnDef="startDate">
-            <th mat-header-cell *matHeaderCellDef> StartDate</th>
+            <th mat-header-cell *matHeaderCellDef> start-Date</th>
             <td mat-cell *matCellDef="let element">{{element.startDate}}</td>
           </ng-container>
 
           <ng-container matColumnDef="endDate">
-            <th mat-header-cell *matHeaderCellDef> EndDate</th>
+            <th mat-header-cell *matHeaderCellDef> End-Date</th>
             <td mat-cell *matCellDef="let element">{{element.endDate}}</td>
           </ng-container>
 
@@ -49,7 +55,7 @@
           </ng-container>
 
           <ng-container matColumnDef="statusOfProgram">
-            <th mat-header-cell *matHeaderCellDef> StatusOfProgram</th>
+            <th mat-header-cell *matHeaderCellDef> Status-Of-Program</th>
             <td mat-cell *matCellDef="let element">{{element.statusOfProgram}}</td>
           </ng-container>
 
@@ -63,8 +69,8 @@
             </td>
           </ng-container>
 
-          <tr mat-header-row *matHeaderRowDef="displayColums" style="background-color: dodgerBlue;" ></tr>
-    <tr mat-row *matRowDef="let row; columns: displayColums; "></tr>
+          <tr mat-header-row *matHeaderRowDef="displayColums" style="background-color: dodgerBlue;"></tr>
+    <tr mat-row *matRowDef="let row; columns: displayColums;"></tr>
 
     </table>
     <mat-paginator [pageSizeOptions]="[5, 10, 20]"

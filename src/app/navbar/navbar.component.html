@@ -1,0 +1,7 @@
+
+<button mat-button [matMenuTriggerFor]="belowMenu"> <fa-icon [icon]="faHome"></fa-icon>    Menu</button>
+<mat-menu #belowMenu="matMenu" yPosition="below">
+  <button routerLink="company"  mat-menu-item>New Assignment</button>
+  <button routerLink="editassignment"  mat-menu-item>Edit Assignment</button>
+  <button routerLink="editassignment"  mat-menu-item>View Assignment</button>
+</mat-menu>

@@ -21,9 +21,9 @@ export class PopupComponent implements OnInit {
       this.api.GetCompanybycode(this.data.id).subscribe(response => {
         this.editdata = response;
         this.companyform.setValue({
-          id: this.editdata.id,vamid: this.editdata.vamid,resourceName: this.editdata.resourceName, email: this.editdata.email,
-          techTrack: this.editdata.techTrack,program: this.editdata.program, startDate: this.editdata.startDate, endDate: this.editdata.endDate,
-          sme: this.editdata.sme,programStatus: this.editdata.programStatus
+          id: this.editdata.id,vamid: this.editdata.vamid,name: this.editdata.name, email: this.editdata.email,
+          programName: this.editdata.programName, startDate: this.editdata.startDate, endDate: this.editdata.endDate,
+          SMEName: this.editdata.SMEName,statusOfProgram: this.editdata.statusOfProgram
         });
       });
     }
@@ -32,14 +32,14 @@ export class PopupComponent implements OnInit {
   companyform = this.builder.group({
     id: this.builder.control({ value: '', disabled: true }),
     vamid: this.builder.control('', Validators.required),
-    resourceName: this.builder.control('', Validators.required),
+    name: this.builder.control('', Validators.required),
     email: this.builder.control('', Validators.required),
-    techTrack: this.builder.control('', Validators.required),
-    program: this.builder.control('', Validators.required),
+    
+    programName: this.builder.control('', Validators.required),
     startDate: this.builder.control('', Validators.required),
     endDate: this.builder.control('', Validators.required),
-    sme: this.builder.control('', Validators.required),
-    programStatus: this.builder.control('', Validators.required),
+    SMEName: this.builder.control('', Validators.required),
+    statusOfProgram: this.builder.control('', Validators.required),
   });
 
   SaveCompany() {

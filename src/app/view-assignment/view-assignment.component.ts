@@ -1,20 +1,21 @@
 import { Component, OnInit, ViewChild } from '@angular/core';
 import { MatDialog } from '@angular/material/dialog';
+import { MatPaginator } from '@angular/material/paginator';
+import { MatSort } from '@angular/material/sort';
+import { MatTableDataSource } from '@angular/material/table';
+import { faHome } from '@fortawesome/free-solid-svg-icons';
 import { companymodel } from '../Model/companymodel';
 import { PopupComponent } from '../popup/popup.component';
 import { ApiService } from '../shared/api.service';
 import * as alertify from 'alertifyjs'
-import { MatTableDataSource } from '@angular/material/table';
-import { MatPaginator } from '@angular/material/paginator';
-import { MatSort } from '@angular/material/sort';
-import { faHome } from '@fortawesome/free-solid-svg-icons';
 
 @Component({
-  selector: 'app-company',
-  templateUrl: './company.component.html',
-  styleUrls: ['./company.component.css']
+  selector: 'app-view-assignment',
+  templateUrl: './view-assignment.component.html',
+  styleUrls: ['./view-assignment.component.css']
 })
-export class CompanyComponent implements OnInit {
+export class ViewAssignmentComponent implements OnInit {
+
   faHome=faHome;
 
   constructor(private dialog: MatDialog, private api: ApiService) { }
@@ -67,5 +68,6 @@ export class CompanyComponent implements OnInit {
 
 
   }
+
 
 }
