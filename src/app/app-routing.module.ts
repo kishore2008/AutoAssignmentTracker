@@ -5,7 +5,6 @@ import { CompanyComponent } from './company/company.component';
 import { EditassignmentComponent } from './editassignment/editassignment.component';
 import { LoginComponent } from './login/login.component';
 import { ViewAssignmentComponent } from './view-assignment/view-assignment.component';
-// import { ProductComponent } from './product/product.component';
 
 const routes: Routes = [
   
@@ -19,21 +18,13 @@ const routes: Routes = [
     component:EditassignmentComponent,path:"editassignment",pathMatch:'full'
   },
   {
-    path:"viewassignment",component:ViewAssignmentComponent
+    component:ViewAssignmentComponent,path:"viewassignment",pathMatch:'full'
   },
   {
     component:LoginComponent,path:"",pathMatch:'full'
   }
   
-  //   component:ProductComponent,path:"product",children:[
-  //     {
-  //       component:AddproductComponent,path:"create"
-  //     },
-  //     {
-  //       component:AddproductComponent,path:"edit/:id"
-  //     }
-  //   ]
-  // }
+ 
 ];
 
 @NgModule({

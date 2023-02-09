@@ -8,17 +8,17 @@
 
       <div class="form-group col-md-6">
         <label for="inputPassword4">VAM ID</label>
-        <input type="vamid" class="form-control" id="inputPassword4" placeholder="vamid" >
+        <input type="vamid" class="form-control" id="inputPassword4" placeholder="vamid" [readOnly]="true">
       </div>
 
       <div class="form-group col-md-6">
         <label for="inputAddress">Name</label>
-        <input type="text" class="form-control" id="inputAddress" placeholder="Name" >
+        <input type="text" class="form-control" id="inputAddress" placeholder="Name" [readOnly]="true">
       </div>
 
       <div class="form-group col-md-6">
         <label for="inputAddress2">Email</label>
-        <input type="text" class="form-control" id="inputAddress2" placeholder="email" >
+        <input type="text" class="form-control" id="inputAddress2" placeholder="email" [readOnly]="true">
       </div>
 
       <div class="form-group col-md-6">
@@ -30,25 +30,25 @@
       </div>
     </div>
 
-    <!-- <div class="form-group">
-      <label for="inputAddress">Category</label>
-      <input type="text" class="form-control" id="inputAddress" placeholder="Category">
+    <div class="form-group">
+      <label for="inputAddress">resourceName</label>
+      <input type="text" class="form-control" id="inputAddress" placeholder="resourceName">
     </div>
 
-    <div class="form-group">
-      <label for="inputAddress2">Program Name</label>
-      <input type="text" class="form-control" id="inputAddress2" placeholder="Program Name">
-    </div> -->
+     <div class="form-group">
+      <label for="inputAddress2">email</label>
+      <input type="text" class="form-control" id="inputAddress2" placeholder="email">
+    </div> 
 
     <div class="form-row">
       <div class="form-group col-md-6">
         <label for="inputCity" >Start Date</label>
-        <input id="date" name="date" class="form-control" type="date" placeholder="MM/DD/YYY"  >
+        <input id="date" name="date" class="form-control" type="date" placeholder="MM/DD/YYY">
       </div>
 
       <div class="form-group col-md-6">
         <label for="inputState">End Date</label>
-        <input  id="date" name="date"  class="form-control" type="date" placeholder="MM/DD/YYY" >
+        <input  id="date" name="date"  class="form-control" type="date" placeholder="MM/DD/YYY">
         
       </div>
       
@@ -72,7 +72,12 @@
     <button mat-raised-button color="primary">Save</button> |
     <a (click)="closepopup()" mat-raised-button color="accent">Close</a>
   </div>
-  </form>
+
+ 
+  
+</form>
+
+
 
 
 

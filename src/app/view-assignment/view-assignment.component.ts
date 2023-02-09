@@ -8,6 +8,8 @@ import { companymodel } from '../Model/companymodel';
 import { PopupComponent } from '../popup/popup.component';
 import { ApiService } from '../shared/api.service';
 import * as alertify from 'alertifyjs'
+import { CommentpopupComponent } from '../commentpopup/commentpopup.component';
+import { faSearch } from '@fortawesome/free-solid-svg-icons';
 
 @Component({
   selector: 'app-view-assignment',
@@ -15,7 +17,7 @@ import * as alertify from 'alertifyjs'
   styleUrls: ['./view-assignment.component.css']
 })
 export class ViewAssignmentComponent implements OnInit {
-
+  faSearch=faSearch;
   faHome=faHome;
 
   constructor(private dialog: MatDialog, private api: ApiService) { }
@@ -29,10 +31,10 @@ export class ViewAssignmentComponent implements OnInit {
     this.LoadCompany();
   }
 
-  displayColums: string[] = ["id","vamid", "name", "email","programName", "startDate", "endDate","SMEName","statusOfProgram", "action"]
+  displayColums: string[] = ["vamid", "name", "email","TechTrack", "startDate", "endDate","SMEName","DelayDays","ProgramStatus", "comments"]
 
   Openpopup(id: any) {
-    const _popup = this.dialog.open(PopupComponent, {
+    const _popup = this.dialog.open(CommentpopupComponent, {
       width: '500px',
       exitAnimationDuration: '1000ms',
       enterAnimationDuration: '1000ms',
@@ -67,6 +69,10 @@ export class ViewAssignmentComponent implements OnInit {
     })
 
 
+  }
+  applyFilter(event: Event) {
+    const filterValue = (event.target as HTMLInputElement).value;
+    this.finaldata.filter = filterValue.trim().toLowerCase();
   }
 
 

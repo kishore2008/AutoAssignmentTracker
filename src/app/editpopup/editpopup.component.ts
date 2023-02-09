@@ -5,11 +5,12 @@ import { ApiService } from '../shared/api.service';
 import * as alertify from 'alertifyjs';
 
 @Component({
-  selector: 'app-popup',
-  templateUrl: './popup.component.html',
-  styleUrls: ['./popup.component.css']
+  selector: 'app-editpopup',
+  templateUrl: './editpopup.component.html',
+  styleUrls: ['./editpopup.component.css']
 })
-export class PopupComponent implements OnInit {
+export class EditpopupComponent implements OnInit {
+
   editdata: any;
   public listitems : Array<string> =["Java",".NET"];
 
@@ -23,7 +24,9 @@ export class PopupComponent implements OnInit {
         this.companyform.setValue({
           // id: this.editdata.id,
           vamid: this.editdata.vamid,name: this.editdata.name, email: this.editdata.email,
-          TechTrack: this.editdata.TechTrack, startDate: this.editdata.startDate, endDate: this.editdata.endDate,
+          TechTrack: this.editdata.TechTrack,Category: this.editdata.Category,
+          ProgramName: this.editdata.ProgramName,
+           startDate: this.editdata.startDate, endDate: this.editdata.endDate,
           SMEName: this.editdata.SMEName,ProgramStatus: this.editdata.ProgramStatus
         });
       });
@@ -37,6 +40,8 @@ export class PopupComponent implements OnInit {
     email: this.builder.control('', Validators.required),
     
     TechTrack: this.builder.control('', Validators.required),
+    Category: this.builder.control('', Validators.required),
+    ProgramName: this.builder.control('', Validators.required),
     startDate: this.builder.control('', Validators.required),
     endDate: this.builder.control('', Validators.required),
     SMEName: this.builder.control('', Validators.required),
@@ -74,3 +79,5 @@ export class PopupComponent implements OnInit {
   }
 
 }
+
+

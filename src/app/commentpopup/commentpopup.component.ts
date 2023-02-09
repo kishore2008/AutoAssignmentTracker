@@ -5,11 +5,14 @@ import { ApiService } from '../shared/api.service';
 import * as alertify from 'alertifyjs';
 
 @Component({
-  selector: 'app-popup',
-  templateUrl: './popup.component.html',
-  styleUrls: ['./popup.component.css']
+  selector: 'app-commentpopup',
+  templateUrl: './commentpopup.component.html',
+  styleUrls: ['./commentpopup.component.css']
 })
-export class PopupComponent implements OnInit {
+export class CommentpopupComponent implements OnInit {
+
+  // comment="Hi";
+
   editdata: any;
   public listitems : Array<string> =["Java",".NET"];
 
@@ -72,5 +75,6 @@ export class PopupComponent implements OnInit {
       });
     })
   }
+
 
 }

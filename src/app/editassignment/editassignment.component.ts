@@ -8,6 +8,8 @@ import * as alertify from 'alertifyjs'
 import { MatTableDataSource } from '@angular/material/table';
 import { MatPaginator } from '@angular/material/paginator';
 import { MatSort } from '@angular/material/sort';
+import { EditpopupComponent } from "../editpopup/editpopup.component";
+import { faSearch } from "@fortawesome/free-solid-svg-icons";
 
 
 @Component({
@@ -16,6 +18,7 @@ import { MatSort } from '@angular/material/sort';
   styleUrls: ['./editassignment.component.css']
 })
 export class EditassignmentComponent implements OnInit {
+  faSearch=faSearch;
 
   constructor(private dialog: MatDialog, private api: ApiService) {}
   @ViewChild(MatPaginator) _paginator!:MatPaginator;
@@ -26,15 +29,15 @@ export class EditassignmentComponent implements OnInit {
   ngOnInit(): void {
     this.LoadCompany();
   }
-  displayColums: string[] = ["id","vamid", "name", "email", "programName", "startDate", "endDate","SMEName","statusOfProgram", "action"]
+  displayColums: string[] = ["vamid", "name", "email", "TechTrack","Category","ProgramName", "startDate", "endDate","SMEName","ProgramStatus", "action"]
 
-  Openpopup(id: any) {
-    const _popup = this.dialog.open(PopupComponent, {
+  Openpopup(vamid: any) {
+    const _popup = this.dialog.open(EditpopupComponent, {
       width: '500px',
       exitAnimationDuration: '1000ms',
       enterAnimationDuration: '1000ms',
       data: {
-        id: id
+        vamid:vamid
       }
     })
     _popup.afterClosed().subscribe(r => {
@@ -51,12 +54,13 @@ export class EditassignmentComponent implements OnInit {
     });
   }
 
-  EditCompany(id: any) {
-    this.Openpopup(id);
+  EditCompany(vamid: any) {
+    this.Openpopup(vamid);
+    
   }
-  RemoveCompany(id: any) {
+  RemoveCompany(vamid: any) {
     alertify.confirm("Remove Company", "do you want remove this company?", () => {
-      this.api.RemoveCompanybycode(id).subscribe(r => {
+      this.api.RemoveCompanybycode(vamid).subscribe(r => {
         this.LoadCompany();
       });
     }, function () {
@@ -64,6 +68,10 @@ export class EditassignmentComponent implements OnInit {
     })
 
 
+  }
+  applyFilter(event: Event) {
+    const filterValue = (event.target as HTMLInputElement).value;
+    this.finaldata.filter = filterValue.trim().toLowerCase();
   }
 
 

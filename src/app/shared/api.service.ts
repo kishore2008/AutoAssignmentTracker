@@ -15,20 +15,20 @@ export class ApiService {
     return this.http.get<companymodel[]>(this.apiurl);
   }
 
-  GetCompanybycode(id: any): Observable<companymodel> {
-    return this.http.get<companymodel>(this.apiurl + '/' + id);
+  GetCompanybycode(vamid: any): Observable<companymodel> {
+    return this.http.get<companymodel>(this.apiurl + '/' + vamid);
   }
 
-  RemoveCompanybycode(id: any) {
-    return this.http.delete(this.apiurl + '/' + id);
+  RemoveCompanybycode(vamid: any) {
+    return this.http.delete(this.apiurl + '/' + vamid);
   }
 
   CreateComapny(companydata: any) {
     return this.http.post(this.apiurl, companydata);
   }
 
-  UpdateComapny(id: any, companydata: any) {
-    return this.http.put(this.apiurl + '/' + id, companydata);
+  UpdateComapny(vamid: any, companydata: any) {
+    return this.http.put(this.apiurl + '/' + vamid, companydata);
   }
 
   getProgramDropDown():Observable<any>{

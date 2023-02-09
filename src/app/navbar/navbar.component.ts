@@ -1,6 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { faHome } from '@fortawesome/free-solid-svg-icons';
 import { Route, Router } from '@angular/router';
+import { faTasks } from '@fortawesome/free-solid-svg-icons';
+import { faListUl } from '@fortawesome/free-solid-svg-icons';
 
 @Component({
   selector: 'app-navbar',
@@ -9,6 +11,8 @@ import { Route, Router } from '@angular/router';
 })
 export class NavbarComponent implements OnInit {
   faHome=faHome
+  faTasks=faTasks
+  faListUl=faListUl
   
   constructor(private router:Router) { }
 

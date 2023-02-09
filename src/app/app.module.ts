@@ -2,6 +2,7 @@ import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { AppRoutingModule } from './app-routing.module';
+import { RouterModule } from '@angular/router';
 import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MaterialModule } from 'src/MaterialModule';
@@ -21,9 +22,14 @@ import { NavbarComponent } from './navbar/navbar.component';
 import { MatSidenavModule } from '@angular/material/sidenav';
 import {MatListModule} from '@angular/material/list';
 import {MatToolbarModule} from '@angular/material/toolbar'; 
-import { RouterModule } from '@angular/router';
+import { MatIconModule } from '@angular/material/icon'
 import { ViewAssignmentComponent } from './view-assignment/view-assignment.component';
-
+import {MatCheckboxModule} from '@angular/material/checkbox';
+import { SearchComponent } from './search/search.component';
+import { MatFormFieldModule } from '@angular/material/form-field';
+import { MatInputModule } from '@angular/material/input';
+import { EditpopupComponent } from './editpopup/editpopup.component';
+import { CommentpopupComponent } from './commentpopup/commentpopup.component';
 
 @NgModule({
   declarations: [
@@ -34,7 +40,10 @@ import { ViewAssignmentComponent } from './view-assignment/view-assignment.compo
     LoginComponent,
     HeaderComponent,
     NavbarComponent,
-    ViewAssignmentComponent
+    ViewAssignmentComponent,
+    SearchComponent,
+    EditpopupComponent,
+    CommentpopupComponent
   ],
   imports: [
     BrowserModule,
@@ -52,7 +61,11 @@ import { ViewAssignmentComponent } from './view-assignment/view-assignment.compo
     MatMenuModule,
     MatSidenavModule,
     MatListModule,
-    MatToolbarModule
+    MatToolbarModule,
+    MatCheckboxModule,
+    MatIconModule,
+    MatFormFieldModule,
+    MatInputModule
   ],
   providers: [],
   bootstrap: [AppComponent]
